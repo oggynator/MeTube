@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "",
-    "start-dev" : "nodemon app.js"
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=3000 nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/oggynator/MeTube#readme",
   "dependencies": {
+    "cross-env": "^7.0.1",
     "express": "^4.17.1"
   }
-  
 }
