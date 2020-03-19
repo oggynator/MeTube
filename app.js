@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 app.use(express.static('public'));
+app.use(express.static('videos'));
 
 
 
@@ -12,7 +13,7 @@ app.get("/", (req,res)=>{
 
 app.get("/player/:videoid", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/player.html");
+    return res.sendFile(__dirname + "/public/player/player.html");
 });
 
 app.listen(process.env.PORT, error=>{
