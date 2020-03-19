@@ -12,8 +12,6 @@ const footerPage = fs.readFileSync(__dirname+"/public/footer/footer.html", "utf8
 const playerPage = fs.readFileSync(__dirname+"/public/player/player.html", "utf8");
 
 
-
-
 app.get("/", (req,res)=>{
     
     return res.send(navbarPage+frontpagePage+footerPage);
@@ -24,6 +22,11 @@ app.get("/player/:videoid", (req,res)=>{
     return res.send(navbarPage+playerPage+footerPage);
 });
 
+//import routes
+const videosRoute = require("./routes/videos");
+
+//setup routes
+app.use(videosRoute);
 
 
 
