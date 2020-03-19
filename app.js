@@ -8,7 +8,7 @@ app.use(express.static('videos'));
 
 app.get("/", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/index.html");
+    return res.sendFile(__dirname + "/public/frontpage/index.html");
 });
 
 app.get("/player/:videoid", (req,res)=>{
