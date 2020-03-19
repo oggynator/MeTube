@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 app.get("/", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/index.html");
+    return res.sendFile(__dirname + "/public/player.html");
 });
 
 app.get("/video", (req,res)=>{
