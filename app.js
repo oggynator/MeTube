@@ -7,12 +7,12 @@ app.use(express.static('public'));
 
 app.get("/", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/player.html");
+    return res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/video", (req,res)=>{
+app.get("/player/:videoid", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/video.html");
+    return res.sendFile(__dirname + "/public/player.html");
 });
 
 app.listen(process.env.PORT, error=>{
