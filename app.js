@@ -16,6 +16,10 @@ app.get("/player/:videoid", (req,res)=>{
     return res.sendFile(__dirname + "/public/player/player.html");
 });
 
+//SSR server side rendering 
+
+
+
 app.listen(process.env.PORT, error=>{
     if(error){
         console.error(error);
