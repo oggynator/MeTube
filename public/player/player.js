@@ -1,9 +1,9 @@
-const fullPath = window.location.pathname;
-let videoId = fullPath.substring(fullPath.lastIndexOf("/")+1);
+const fullPath = window.location.href;
+const videoId = fullPath.substr(fullPath.lastIndexOf("/")+1);
 console.log(videoId);
 
 const player = `<video  width="1000" height="1000" autoplay controls>
-                 <source src="/${videoId}" type="video/mp4">
+                 <source src="/${videoId}" >
                 </video>`;
 
  $("#playerWrapper").append(player);               

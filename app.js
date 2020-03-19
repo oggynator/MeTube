@@ -4,19 +4,26 @@ const app = express();
 app.use(express.static('public'));
 app.use(express.static('videos'));
 
+//SSR server side rendering 
+const fs =require("fs");
+const navbarPage = fs.readFileSync(__dirname+ "/public/navbar/navbar.html", "utf8");
+const frontpagePage = fs.readFileSync(__dirname+"/public/frontpage/index.html", "utf8");
+const footerPage = fs.readFileSync(__dirname+"/public/footer/footer.html", "utf8");
+const playerPage = fs.readFileSync(__dirname+"/public/player/player.html", "utf8");
+
+
 
 
 app.get("/", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/frontpage/index.html");
+    return res.send(navbarPage+frontpagePage+footerPage);
 });
 
 app.get("/player/:videoid", (req,res)=>{
     
-    return res.sendFile(__dirname + "/public/player/player.html");
+    return res.send(navbarPage+playerPage+footerPage);
 });
 
-//SSR server side rendering 
 
 
 
