@@ -1,2 +1,3 @@
-console.log(window.location.href )
-console.log(window.location.pathname)
+const fullPath = window.location.pathname;
+const videoId = fullPath.substring(fullPath.lastIndexOf("/")+1);
+console.log(videoId);
