@@ -24,7 +24,10 @@
   },
   "homepage": "https://github.com/oggynator/MeTube#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "uuid": "^7.0.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.2"
